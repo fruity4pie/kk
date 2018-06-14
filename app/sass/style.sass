@@ -1,0 +1,543 @@
+@import "./fonts"
+@import "./libs"
+
+*
+  box-sizing: border-box
+
+html
+  color: #fff
+  font: 16px/1pt mreg
+
+//Libs
+
+.owl-dots
+  width: 180px
+  display: flex
+  flex-flow: row nowrap
+  justify-content: space-between
+  position: absolute
+  bottom: 50px
+  left: 100px
+
+.owl-dot
+  width: 40px
+  height: 2px
+  background-color: #ffffff !important
+  opacity: 0.5
+  position: relative
+  span
+    display: none
+    position: absolute
+    left: 50%
+    top: -35px
+    transform: translate(-50%)
+    color: #ffffff
+    font: 400 14px mbold
+    letter-spacing: 1.4px
+  &.active
+    opacity: 1
+    span
+      display: inline
+  &:focus
+    outline: none
+
+
+//Containers
+
+.container
+  max-width: 1400px
+  width: 100%
+  padding: 0 15px
+  margin: 0 auto
+  &_mw1720
+    max-width: 1750px
+  &_mw1820
+    max-width: 1820px
+
+//Element' blocks!
+
+.link
+  color: inherit
+  text-decoration: none
+  &:focus
+    outline: none
+
+.header
+  position: fixed
+  width: 100%
+  top: 0
+  left: 0
+  z-index: 10
+  padding-top: 40px
+  &__list
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: center
+  &_bg
+    background: rgba(0,0,0, .8)
+    padding-top: 0
+
+.nav
+  max-width: 843px
+  width: 100%
+  display: flex
+  flex-floW: row nowrap
+  justify-content: space-between
+  &-h
+    display: flex
+    flex-flow: column nowrap
+    align-items: center
+  &__item
+    color: #ffffff
+    font: 400 14px mbold
+    text-transform: uppercase
+    transition: all .3s
+    letter-spacing: 1.4px
+    &_active
+      color: #85714c
+    &:hover
+      color: #85714c
+
+.lang
+  color: #ffffff
+  font: 400 14px mbold
+  text-transform: uppercase
+  letter-spacing: 1.4px
+  position: relative
+  position: relative
+  padding: 20px 24px 21px 23px
+  cursor: pointer
+  &:after
+    content: ''
+    position: absolute
+    display: block
+    top: 50%
+    transform: translate(0, -50%)
+    width: 50px
+    height: 2px
+    background-color: #85714c
+    left: -50px
+  &__inner
+    display: none
+    position: absolute
+    padding: 22px 23px 20px 23px
+    background-color: #000000
+    left: -4px
+    border-left: 4px solid #85714c
+    & .lang__item
+      &:first-child
+        margin: 0 0 22px
+  &:hover &__inner
+    display: block
+  &:hover
+    background-color: #000000
+    border-left: 4px solid #85714c
+
+.title
+  color: #333
+  font: 400 48px/48px mbold
+  letter-spacing: 1.2px
+  &_mb210
+    margin-bottom: 210px
+
+.lable
+  color: #000
+  position: relative
+  font: 400 14px/14px mbold
+  text-transform: uppercase
+  letter-spacing: 2.8px
+  transition: all .3s
+  &:after
+    content: ''
+    width: 50px
+    height: 2px
+    background-color: #000
+    display: block
+    position: absolute
+    top: 50%
+    right: -85px
+    transition: all 1s
+  &:before
+    content: ''
+    width: 0
+    height: 2px
+    background-color: #000
+    display: block
+    position: absolute
+    top: 50%
+    right: -85px
+    transition: all 1s
+  &:hover:after
+    width: 0
+    right: 0
+  &:hover:before
+    width: 50px
+  &_cw
+    color: #fff
+    &:after
+      background: #fff
+    &:before
+      background: #fff
+  &_mod1
+    color: #f4f8fa
+    font: 400 16px mbold
+    letter-spacing: 3.2px
+    &:after
+      display: none
+    &:before
+      display: none
+
+.btn
+  max-width: 320px
+  width: 100%
+  height: 60px
+  box-shadow: 0 10px 25px rgba(133, 113, 76, 0.25)
+  background-color: #85714c
+  text-align: center
+  color: #f4f8fa
+  font: 400 14px/60px mbold
+  text-transform: uppercase
+  letter-spacing: 2.8px
+  position: relative
+  z-index: 2
+  transition: all .5s
+  display: block
+  margin: 0 auto
+  &_mb250
+    margin-bottom: 250px
+  &:before
+    content: ''
+    position: absolute
+    display: block
+    width: 360px
+    height: 1px
+    background-color: #85714c
+    top: 50%
+    left: -20px
+    z-index: -1
+    transition: all .3s
+  &:after
+    content: ''
+    position: absolute
+    display: block
+    width: 1px
+    height: 0
+    background-color: #85714c
+    top: -20px
+    left: 50%
+    z-index: -1
+    transition: all .3s
+  &:hover:before
+    width: 0
+  &:hover:after
+    height: 100px
+
+.address
+  &_mb110
+    margin-bottom: 110px
+  &__wrapper
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-around
+  &__title
+    color: #999
+    font: 400 18px/30px mreg
+    letter-spacing: 0.9px
+  &__text
+    color: #333333
+    font: 700 24px/36px mbold
+    letter-spacing: 1.2px
+
+.socials
+  color: #333333
+  font: 400 14px mbold
+  letter-spacing: 1.4px
+  width: 225px
+  display: flex
+  flex-flow: row nowrap
+  justify-content: space-between
+  &_h
+    position: absolute
+    z-index: 1
+    right: 53px
+    bottom: 67px
+    color: #fff
+
+.footer
+  &__list
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    color: #cccccc
+    font: 400 14px mbold
+    letter-spacing: 1.4px
+
+.mobile
+	width: 30px
+	height: 28px
+	border-radius: 5px
+	background-color: #fff
+	text-align: center
+	line-height: 28px
+	color: #000
+	font-size: 20px
+	cursor: pointer
+	position: fixed
+	top: 10px
+	right: 15px
+	z-index: 101
+	display: none
+	&__item_hidden
+		display: none
+
+.hidden-menu
+	position: fixed
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0
+	background: rgba(0, 0, 0, .9)
+	z-index: 9
+	display: none
+	&_active
+		display: block
+
+.nav-h
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  & li
+    &:not(:last-child)
+      margin-bottom: 20px
+
+//Main Markup
+
+.about
+  height: 100vh
+  position: relative
+  z-index: 10
+  &-gallery
+    position: absolute
+    z-index: -1
+    &__item
+      position: relative
+    &__title
+      max-width: 857px
+      position: absolute
+      top: 41.1%
+      left: 14.7%
+      color: #ffffff
+      font: 400 72px/72px mbold
+      line-height: 72px
+      letter-spacing: 1.4px
+    img
+      height: 100vh
+  &__lable
+    color: #ffffff
+    font: 400 14px mbold
+    letter-spacing: 0.7px
+    position: absolute
+    bottom: 45px
+    left: 50%
+    transform: translate(-50%)
+    &:before
+      content: ''
+      position: absolute
+      top: -70px
+      left: 50%
+      transform: translate(-50%)
+      display: block
+      height: 50px
+      width: 2px
+      background-color: #fff
+      transition: all .3s
+    &:after
+      content: ''
+      position: absolute
+      top: -70px
+      left: 50%
+      transform: translate(-50%)
+      display: block
+      height: 0
+      width: 2px
+      background-color: #fff
+      transition: all .3s
+    &:hover:after
+      height: 50px
+    &:hover:before
+      height: 0
+      top: 0
+
+.company
+  color: #000
+  padding: 200px 0 100px
+  background: url('../img/companybg.jpg') no-repeat 50% 46%
+  overflow: hidden
+  &-block
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    &_mb75
+      margin-bottom: 75px
+    &_mb110
+      margin-bottom: 110px
+    &_mb154
+      margin-bottom: 154px
+    &__item
+      flex: 0 1 auto
+      &_fb440
+        flex-basis: 440px
+      &_fb435
+        flex-basis: 453px
+      &_fb683
+        flex-basis: 683px
+      &_fb687
+        flex-basis: 687px
+
+.text-block
+  &_pt43
+    padding-top: 43px
+  &__wrapper
+    &_mb51
+      margin-bottom: 51px
+    &_mb65
+      margin-bottom: 65px
+  &__header
+    color: #333
+    font: 400 48px/48px mbold
+    letter-spacing: 1.2px
+    margin-bottom: 45px
+    &_mod1
+      color: #f4f8fa
+      font: 400 36px/36px mbold
+      letter-spacing: -.1px
+      max-width: 382px
+    &_mb70
+      margin-bottom: 70px
+    &_mb110
+      margin-bottom: 110px
+  &__par
+    color: #333
+    font: 400 16px/27.5px mlight
+    letter-spacing: 0.37px
+    &_mod1
+      width: 198px
+      color: #999999
+      font: 400 14px/23px mlight
+      letter-spacing: 0.35px
+    &_mb51
+      margin-bottom: 51px
+    &_mb90
+      margin-bottom: 90px
+    &:not(:last-of-type)
+      margin: 0 0 44px
+
+.photo-block
+  position: relative
+  z-index: 1
+  &__item
+    width: 100%
+    height: 100%
+  &__pseudo-item
+    position: absolute
+    bottom: -80px
+    right: -87px
+    z-index: -1
+  &__first-lable
+    padding: 20px 0 10px 20px
+    width: 383px
+    height: 169px
+    border: 5px solid #85714c
+    color: #85714c
+    font: 400 14px mbold
+    text-transform: uppercase
+    letter-spacing: 0.7px
+    display: flex
+    flex-flow: column nowrap
+    justify-content: space-between
+    position: absolute
+    left: -178px
+    bottom: 72px
+    & span:last-child
+      font-size: 72px
+      line-height: 60px
+      letter-spacing: 3.6px
+  &__second-lable
+    color: #333333
+    font: 400 24px mlight
+    text-transform: uppercase
+    position: absolute
+    right: -125px
+    bottom: 141px
+    transform: rotate(-90deg)
+    & span:first-child
+      font: 700 150px mbold
+      letter-spacing: 0.6px
+  &_h576
+    max-height: 576px
+    height: 100%
+  &_h400
+    max-height: 400px
+    height: 100%
+
+.portfolio
+  padding: 100px 0 163px
+  background: #333
+  &__wrapper
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: center
+    max-width: 1140px
+    &_mb170
+      margin-bottom: 170px
+  &__title
+    color: #ffffff
+    font: 400 36px/36px mbold
+    letter-spacing: 0.8px
+    max-width: 556px
+  &-gallery
+    &__item
+      position: relative
+      margin-bottom: 105px
+      z-index: 1
+    &__img
+      position: absolute
+      top: 0
+      right: 0
+      z-index: -1
+  &__mark
+    color: #5c5c5c
+    font: 400 14px mreg
+    letter-spacing: 0.7px
+    &_mb40
+      margin-bottom: 40px
+  & .owl-dots
+    left: 0
+    bottom: -90px
+
+.contacts
+  padding: 100px 0 55px
+  position: relative
+  z-index: 1
+  overflow: hidden
+  &__bg
+    display: flex
+    flex-flow: row nowrap
+    justify-content: center
+    align-items: center
+    position: absolute
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+    z-index: -1
+  &__text
+    color: #fafafa
+    font: 400 250px/60px mextra
+    text-transform: uppercase
+    letter-spacing: 12.5px
+
+@import "./media"

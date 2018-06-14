@@ -1,0 +1,171 @@
+@media screen and (max-width: 1470px)
+  .photo-block__second-lable
+    display: none
+  .contacts__text
+    font-size: 200px
+
+@media screen and (max-width: 1260px)
+  .about
+    &-gallery
+      &__title
+        font-size: 60px
+        line-height: 60px
+
+  .portfolio
+    &__wrapper
+      flex-flow: column nowrap
+      justify-content: flex-start
+      align-items: baseline
+      margin: 0 0 100px
+    &__title
+      margin: 0 0 50px
+    &__mark
+      color: #fff
+    &-gallery
+      &__item
+        margin: 0
+        & .text-block
+          display: none
+      &__img
+        display: block
+        position: relative
+
+  .contacts__text
+    font-size: 180px
+
+@media screen and (max-width: 1180px)
+  .lang
+    &:after
+      display: none
+
+  .about
+    &-gallery
+      &__title
+        font-size: 50px
+        line-height: 50px
+        max-width: 610px
+  .company
+    padding: 100px 0
+    &-block
+      flex-flow: row wrap
+      justify-content: space-around
+      margin: 0 0 75px
+
+  .portfolio
+    padding: 100px 0
+
+  .text-block
+    order: -1
+    margin: 0 0 15px
+    padding: 0
+    &__header
+      &_mb70
+        margin-bottom: 30px
+    &__wrapper
+      margin: 0 0 25px
+    &__par
+      &:not(:last-of-type)
+        margin: 0 0 20px
+
+  .photo-block
+    order: 1
+
+  .photo-block__first-lable
+    display: none
+
+  .contacts__text
+    font-size: 150px
+
+@media screen and (max-width: 1024px)
+  .header__list
+    padding: 0
+    height: 50px
+  .logo, .nav, .lang
+    display: none
+
+  .portfolio
+    & .owl-dots
+      bottom: -70px
+
+  .title
+    font-size: 40px
+
+  .mobile, .btn_480
+	  display: block
+
+@media screen and (max-width: 768px)
+  .about
+    &__lable
+      display: none
+    &-gallery__title
+      font-size: 6.52vw
+    & .socials
+      display: none
+    & .owl-dots
+      left: 50%
+      transform: translate(-50%)
+
+  .company
+    padding: 50px 0
+    &-block
+      margin: 0 0 35px
+
+  .text-block
+    &__header
+      font-size: 40px
+
+  .portfolio
+    &__wrapper
+      margin: 0 0 50px
+    &__title
+      font-size: 29px
+      margin: 0 0 25px
+    padding: 50px 0
+    & .owl-dots
+      bottom: -40px
+
+  .contacts
+    padding: 50px 0
+    &__text
+      font-size: 14.3vw
+    &__bg
+      display: none
+
+  .title
+    font-size: 35px
+    &_mb210
+      margin-bottom: 50px
+
+  .address
+    &__wrapper
+      flex-flow: row wrap
+      justify-content: space-around
+      text-align: center
+    &_mb110
+      margin: 0 0 50px
+
+  .btn
+    &_mb250
+      margin-bottom: 50px
+
+  .footer__list
+    flex-flow: column nowrap
+    align-items: center
+    & li:not(:last-child)
+      margin: 0 0 20px
+
+@media screen and (max-width: 480px)
+  .photo-block__pseudo-item
+    display: none
+
+  .text-block__header
+    font-size: 8.3vw
+
+  .portfolio__title
+    font-size: 6.25vw
+
+  .title
+    font-size: 5.42vw
+
+  .address__text
+    font-size: 5vw
