@@ -8,6 +8,9 @@ html
   color: #fff
   font: 16px/1pt mreg
 
+body
+  overflow-y: scroll
+
 //Libs
 
 .owl-dots
@@ -25,6 +28,13 @@ html
   background-color: #ffffff !important
   opacity: 0.5
   position: relative
+  &:before
+    content: ''
+    position: absolute
+    bottom: 0
+    left: 0
+    height: 30px
+    width: 100%
   span
     display: none
     position: absolute
@@ -40,6 +50,11 @@ html
       display: inline
   &:focus
     outline: none
+
+.owl-carousel .owl-stage, .owl-carousel.owl-drag .owl-item
+  -ms-touch-action: auto
+  touch-action: auto
+
 
 
 //Containers
@@ -131,6 +146,7 @@ html
   &:hover &__inner
     display: block
   &:hover
+    width: 69.1px
     background-color: #000000
     border-left: 4px solid #85714c
 
@@ -269,6 +285,7 @@ html
     display: flex
     flex-flow: row nowrap
     justify-content: space-between
+    align-items: center
     color: #cccccc
     font: 400 14px mbold
     letter-spacing: 1.4px
@@ -311,6 +328,13 @@ html
   & li
     &:not(:last-child)
       margin-bottom: 20px
+
+.big
+  font: 400 14px mbold
+  font-size: 14px
+  font-weight: 400
+  color: #333
+  letter-spacing: 1.4px
 
 //Main Markup
 
@@ -475,6 +499,13 @@ html
     & span:first-child
       font: 700 150px mbold
       letter-spacing: 0.6px
+    &_mod1
+      color: #333333
+      position: absolute
+      left: -151px
+      top: -144px
+      right: auto
+      bottom: auto
   &_h576
     max-height: 576px
     height: 100%

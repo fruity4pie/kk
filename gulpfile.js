@@ -54,6 +54,7 @@ gulp.task('scripts', function() {
     'app/libs/page-scroll-to-id/jquery.malihu.PageScroll2id.js',
     'app/libs/skrollr.js',
     'app/libs/jquery.sticky.js',
+    'app/libs/mobile-chrome-vh-fix-master/mobile-chrome-vh-fix.js',
 		'app/js/main.js'
 		])
 		.pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js

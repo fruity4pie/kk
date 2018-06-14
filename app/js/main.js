@@ -33,6 +33,8 @@ window.onload = function(){
   hiddenMenuLinks.each(function(index, item) {
     $(this).on('click', function() {
       hiddenMenu.toggleClass('hidden-menu_active');
+      hamburger.toggleClass('mobile__item_hidden');
+      close.toggleClass('mobile__item_hidden');
     })
   })
 
@@ -55,20 +57,21 @@ window.onload = function(){
 	  }
   })
 
-
   //LAng
-  var langItems = $('.lang__item');
-  var langContainer = $('.lang li').first();
+  var langItems = $('.lang__item a');
 
   langItems.each(function(index,item) {
     $(this).on('click', function() {
       if(index === 0) {
         return;
       }
-      var curr = $(this).text();
-      var prev = $(this).parent().parent().parent().find('li').first().text();
-      langContainer.text(curr);
-      $(this).text(prev);
+
+      var currText = $(this).text();
+      var prevText = $('.lang li a').first().text();
+      var prevItem = $('.lang li a').first();
+
+      prevItem.text(currText);
+      $(this).text(prevText);
     })
   })
 
@@ -99,18 +102,15 @@ window.onload = function(){
     }
   });
 
-  //Parallax Scroll
-  var s = skrollr.init();
-
   //Owl Carousel
+
   var owl = $('.about-gallery');
   owl.owlCarousel({
     margin:0,
     loop:true,
     items:1,
     dots: true,
-    dotData: true,
-    dotsData: true,
+    dotsEach: true,
     autoplay: true,
     autoplayTimeout:5000
   });
@@ -125,6 +125,8 @@ window.onload = function(){
     margin:0,
     loop:true,
     items:1,
+    mouseDrag: false,
+    touchDrag: true,
     dots: true,
     dotsEach: true,
   });
@@ -133,5 +135,14 @@ window.onload = function(){
   owlDots2.each(function(index, elem) {
     $(this).html(`<span>0${index+1}</span>`)
   })
+
+  //DetectingMobDevices and On/Off Parallax
+
+  function isMobileDevice() {
+    return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+  };
+  if(!isMobileDevice()) {
+    var s = skrollr.init();
+  }
 
 }

@@ -3570,6 +3570,9 @@ html {
   color: #fff;
   font: 16px/1pt mreg; }
 
+body {
+  overflow-y: scroll; }
+
 .owl-dots {
   width: 180px;
   display: -webkit-box;
@@ -3592,6 +3595,13 @@ html {
   background-color: #ffffff !important;
   opacity: 0.5;
   position: relative; }
+  .owl-dot:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 30px;
+    width: 100%; }
   .owl-dot span {
     display: none;
     position: absolute;
@@ -3608,6 +3618,10 @@ html {
       display: inline; }
   .owl-dot:focus {
     outline: none; }
+
+.owl-carousel .owl-stage, .owl-carousel.owl-drag .owl-item {
+  -ms-touch-action: auto;
+  touch-action: auto; }
 
 .container {
   max-width: 1400px;
@@ -3715,6 +3729,7 @@ html {
   .lang:hover .lang__inner {
     display: block; }
   .lang:hover {
+    width: 69.1px;
     background-color: #000000;
     border-left: 4px solid #85714c; }
 
@@ -3881,6 +3896,9 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #cccccc;
   font: 400 14px mbold;
   letter-spacing: 1.4px; }
@@ -3923,6 +3941,13 @@ html {
           transform: translate(-50%, -50%); }
   .nav-h li:not(:last-child) {
     margin-bottom: 20px; }
+
+.big {
+  font: 400 14px mbold;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  letter-spacing: 1.4px; }
 
 .about {
   height: 100vh;
@@ -4113,6 +4138,13 @@ html {
     .photo-block__second-lable span:first-child {
       font: 700 150px mbold;
       letter-spacing: 0.6px; }
+    .photo-block__second-lable_mod1 {
+      color: #333333;
+      position: absolute;
+      left: -151px;
+      top: -144px;
+      right: auto;
+      bottom: auto; }
   .photo-block_h576 {
     max-height: 576px;
     height: 100%; }
