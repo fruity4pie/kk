@@ -110,7 +110,9 @@ window.onload = function(){
     items:1,
     dots: true,
     dotData: true,
-    dotsData: true
+    dotsData: true,
+    autoplay: true,
+    autoplayTimeout:5000
   });
 
   var owlDots = $('.about-gallery .owl-dots').find('.owl-dot');
