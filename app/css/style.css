@@ -3727,9 +3727,10 @@ body {
     .lang__inner .lang__item:first-child {
       margin: 0 0 22px; }
   .lang:hover .lang__inner {
-    display: block; }
+    display: block;
+    width: 69px; }
   .lang:hover {
-    width: 69.1px;
+    width: 69px;
     background-color: #000000;
     border-left: 4px solid #85714c; }
 
