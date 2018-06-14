@@ -61,7 +61,8 @@ window.onload = function(){
   var langItems = $('.lang__item a');
 
   langItems.each(function(index,item) {
-    $(this).on('click', function() {
+    $(this).on('click', function(e) {
+      e.preventDefault();
       if(index === 0) {
         return;
       }
